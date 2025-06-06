@@ -1,0 +1,223 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9fb;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: white;
+  padding: 1.2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 15px rgba(123, 47, 247, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+}
+
+nav a {
+  color: white;
+  margin-left: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffe600;
+  text-shadow: 0 0 5px #ffe600;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: white;
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.25);
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.hero .btn {
+  background: #ff007f;
+  color: white;
+  padding: 0.85rem 2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 15px rgba(255,0,127,0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #e6006f;
+  box-shadow: 0 8px 20px rgba(230,0,111,0.8);
+  transform: translateY(-3px);
+}
+
+/* Course List */
+.course-list {
+  max-width: 1100px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem 4rem 2rem;
+}
+
+.course-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(123, 47, 247, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 50px rgba(123, 47, 247, 0.3);
+}
+
+.course-card h3 {
+  font-size: 1.6rem;
+  color: #7b2ff7;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.course-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+}
+
+.course-card a {
+  font-weight: 700;
+  color: #ff007f;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.course-card a:hover {
+  color: #e6006f;
+  text-shadow: 0 0 5px #e6006f;
+}
+
+/* Course Detail Page */
+.course-detail {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem 4rem 2rem;
+}
+
+.video-container {
+  box-shadow: 0 10px 30px rgba(123, 47, 247, 0.15);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.progress-tracker {
+  background: white;
+  padding: 1.8rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(123, 47, 247, 0.12);
+  text-align: center;
+}
+
+.progress-tracker h2 {
+  margin-bottom: 1rem;
+  color: #7b2ff7;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eee;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(123, 47, 247, 0.6);
+}
+
+progress::-moz-progress-bar {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(123, 47, 247, 0.6);
+}
+
+.progress-tracker p {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Responsive tweaks */
+@media(max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .course-list {
+    grid-template-columns: 1fr;
+  }
+}
